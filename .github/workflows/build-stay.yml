@@ -1,0 +1,54 @@
+name: Build ZIP para Stay
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Baixar assets do Figma na primeira execução
+        run: npm run assets
+
+      - name: Persistir assets no repositório
+        shell: bash
+        run: |
+          if [ -n "$(git status --porcelain public/assets)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/assets
+            git commit -m "chore: persist Figma assets"
+            git push
+          else
+            echo "Assets já estão persistidos."
+          fi
+
+      - name: Gerar build
+        run: npm run build
+
+      - name: Gerar ZIP final para Stay
+        shell: bash
+        run: |
+          cd dist
+          zip -r ../maria-lisboa-stay.zip .
+
+      - name: Salvar ZIP como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: maria-lisboa-stay
+          path: maria-lisboa-stay.zip
+          if-no-files-found: error
+          retention-days: 30
