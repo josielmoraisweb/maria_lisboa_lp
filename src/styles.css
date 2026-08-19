@@ -1,0 +1,89 @@
+:root {
+  background: #f8f6f0;
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f8f6f0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f6f0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  width: min(100%, 801px);
+  margin: 0 auto;
+  background: #f8f6f0;
+  overflow: hidden;
+}
+
+.figma-section {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card-hotspot {
+  position: absolute;
+  left: 4.4%;
+  width: 86.7%;
+  height: 14.82%;
+  border-radius: 3.75vw;
+  z-index: 2;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card-hotspot[aria-disabled="true"] {
+  cursor: default;
+}
+
+.card-hotspot[href]:focus-visible {
+  outline: 3px solid rgba(117, 80, 68, 0.72);
+  outline-offset: 3px;
+}
+
+.hotspot-1 { top: 1.61%; }
+.hotspot-2 { top: 16.61%; }
+.hotspot-3 { top: 31.60%; }
+.hotspot-4 { top: 46.59%; }
+.hotspot-5 { top: 61.59%; }
+.hotspot-6 { top: 76.58%; }
+
+@media (min-width: 801px) {
+  body {
+    padding-inline: 0;
+  }
+
+  .card-hotspot {
+    border-radius: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
