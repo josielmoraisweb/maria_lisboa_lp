@@ -20,24 +20,28 @@ jobs:
         with:
           node-version: 22
 
-      - name: Baixar assets do Figma na primeira execução
-        run: npm run assets
+      - name: Instalar dependências
+        run: npm install
 
-      - name: Persistir assets no repositório
-        shell: bash
-        run: |
-          if [ -n "$(git status --porcelain public/assets)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/assets
-            git commit -m "chore: persist Figma assets"
-            git push
-          else
-            echo "Assets já estão persistidos."
-          fi
+      - name: Garantir assets do Figma
+        run: npm run assets
 
       - name: Gerar build
         run: npm run build
+
+      - name: Persistir build para a Stay
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f dist
+          git add public/assets || true
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "build: persistir dist para Stay [skip ci]"
+            git push
+          else
+            echo "Build já está atualizado no repositório."
+          fi
 
       - name: Gerar ZIP final para Stay
         shell: bash
