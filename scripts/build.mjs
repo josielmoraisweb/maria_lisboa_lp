@@ -35,17 +35,7 @@ const hero = path.join(publicAssets, "hero.png");
 const links = path.join(publicAssets, "links.png");
 const about = path.join(publicAssets, "about.png");
 
-await cropWebp({
-  source: hero,
-  output: path.join(distAssets, "hero_visual.webp"),
-  designW: 800,
-  designH: 783,
-  x: 0,
-  y: 0,
-  w: 800,
-  h: 530,
-  quality: 90,
-});
+await cropWebp({ source: hero, output: path.join(distAssets, "hero_visual.webp"), designW: 800, designH: 783, x: 0, y: 0, w: 800, h: 530, quality: 90 });
 
 const cardX = 35.223;
 const cardW = 694.448;
@@ -61,17 +51,7 @@ await Promise.all([
   cropWebp({ source: links, output: path.join(distAssets, "card_studio_visual.webp"), designW: 801, designH: 1736, x: cardX + 395, y: cardTops[5], w: cardW - 395, h: cardH }),
 ]);
 
-await cropWebp({
-  source: about,
-  output: path.join(distAssets, "about_visual.webp"),
-  designW: 800,
-  designH: 1200,
-  x: 0,
-  y: 0,
-  w: 800,
-  h: 620,
-  quality: 90,
-});
+await cropWebp({ source: about, output: path.join(distAssets, "about_visual.webp"), designW: 800, designH: 1200, x: 0, y: 0, w: 800, h: 600, quality: 90 });
 
 const [template, css, js, config] = await Promise.all([
   readFile(path.join(src, "index.html"), "utf8"),
@@ -94,7 +74,6 @@ await writeFile(path.join(dist, "index.html"), bundled, "utf8");
 await writeFile(path.join(dist, "styles.css"), css, "utf8");
 await writeFile(path.join(dist, "app.js"), js, "utf8");
 await writeFile(path.join(dist, "config.js"), config, "utf8");
-
 await cp(publicAssets, path.join(distAssets, "source"), { recursive: true });
 
 const files = await readdir(dist, { recursive: true });
