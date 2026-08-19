@@ -1,29 +1,99 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f8f6f0" />
-  <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
-  <title>Maria Lisboa | Lash Designer & Mentora</title>
-  <style>
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:#f8f6f0}body{min-width:320px}.page-shell{width:min(100%,801px);margin:0 auto;background:#f8f6f0;overflow:hidden}.section{position:relative;width:100%;line-height:0}.section img{display:block;width:100%;height:auto}.card-hotspot{position:absolute;left:4.4%;width:86.7%;height:14.82%;z-index:2}.hotspot-1{top:1.61%}.hotspot-2{top:16.61%}.hotspot-3{top:31.60%}.hotspot-4{top:46.59%}.hotspot-5{top:61.59%}.hotspot-6{top:76.58%}
-  </style>
-</head>
-<body>
-  <main class="page-shell" aria-label="Maria Lisboa, Lash Designer e Mentora">
-    <section class="section"><img src="https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/hero.png" alt="Maria Lisboa, Lash Designer e Mentora" /></section>
-    <section class="section" aria-label="Links úteis">
-      <img src="https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/links.png" alt="Cursos, mentorias, palestras e agendamento de Maria Lisboa" />
-      <a class="card-hotspot hotspot-1" aria-label="Entrar no grupo de espera"></a>
-      <a class="card-hotspot hotspot-2" aria-label="Chamar no WhatsApp"></a>
-      <a class="card-hotspot hotspot-3" aria-label="Garantir vaga"></a>
-      <a class="card-hotspot hotspot-4" aria-label="Falar no WhatsApp"></a>
-      <a class="card-hotspot hotspot-5" aria-label="Contratar palestra"></a>
-      <a class="card-hotspot hotspot-6" aria-label="Agendar no WhatsApp"></a>
-    </section>
-    <section class="section"><img src="https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/about.png" alt="Biografia de Maria Lisboa" /></section>
-    <footer class="section"><img src="https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/footer.png" alt="Copyright Maria Lisboa 2026" /></footer>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f8f6f0" />
+    <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
+    <title>Maria Lisboa | Lash Designer & Mentora</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__art" aria-hidden="true"></div>
+        <p class="hero__champion"><strong>+ de 16x Campeã</strong><br />em Campeonatos<br />Internacionais</p>
+        <div class="hero__copy" data-reveal>
+          <h1 id="hero-title">Maria Lisboa</h1>
+          <p class="hero__tagline">Sua próxima conquista<br />começa <em>aqui.</em></p>
+          <p class="hero__scroll">Deslize para baixo para <strong>acessar links úteis</strong></p>
+        </div>
+      </section>
+
+      <section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
+        <article class="offer offer--online offer--sprite-1" data-reveal>
+          <div class="offer__copy offer__copy--right offer__copy--dark">
+            <span class="offer__badge offer__badge--white">Em breve</span>
+            <h2 class="offer__title offer__title--gold">Mentoria Método<br />Lash Campeã</h2>
+            <p class="offer__text offer__text--white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
+            <a class="cta cta--gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="offer offer--live offer--sprite-2" data-reveal>
+          <div class="offer__copy offer__copy--left offer__copy--brown">
+            <span class="offer__badge offer__badge--white">Mentoria ao vivo ou presencial</span>
+            <h2 class="offer__title offer__title--white">Mentoria Método<br />Lash Campeã</h2>
+            <p class="offer__text offer__text--white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
+            <a class="cta cta--brown" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="offer offer--podio offer--sprite-3" data-reveal>
+          <div class="offer__copy offer__copy--right offer__copy--rose">
+            <span class="offer__badge">Aperfeiçoamento</span>
+            <h2 class="offer__title">Sua Técnica no Pódio</h2>
+            <p class="offer__text">Tendências, visagismo e critérios de campeonato.</p>
+            <a class="cta cta--brown" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="offer offer--beginner offer--sprite-4" data-reveal>
+          <div class="offer__copy offer__copy--left offer__copy--cream">
+            <span class="offer__badge">Em breve</span>
+            <h2 class="offer__title">Curso Iniciante</h2>
+            <p class="offer__text">Novas vagas para começar uma trajetória de excelência.</p>
+            <a class="cta cta--brown" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="offer offer--speaker offer--sprite-5" data-reveal>
+          <div class="offer__copy offer__copy--right offer__copy--cream">
+            <span class="offer__badge">Eventos</span>
+            <h2 class="offer__title">Palestras</h2>
+            <p class="offer__text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
+            <a class="cta cta--brown" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="offer offer--studio offer--sprite-6" data-reveal>
+          <div class="offer__copy offer__copy--left offer__copy--cream">
+            <span class="offer__badge">Estiva · MG</span>
+            <h2 class="offer__title">Agende seu horário<br />no studio</h2>
+            <p class="offer__text">Um atendimento com cuidado, técnica e precisão.</p>
+            <a class="cta cta--brown" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </section>
+
+      <section class="about" aria-labelledby="about-title">
+        <div class="about__visual" aria-hidden="true"></div>
+        <div class="about__copy" data-reveal>
+          <p class="about__eyebrow">Quem sou eu</p>
+          <h2 id="about-title">Maria Lisboa</h2>
+          <p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, <strong>Mentora com selo internacional, jurada e palestrante.</strong></p>
+          <p>Com certificações nacionais e internacionais e <strong>+ de 16 premiações em campeonatos no Brasil e no exterior</strong>, nas categorias Clássico Fio a Fio, Fios Tecnológicos e Volume Russo.</p>
+          <p>Entre as <strong>principais conquistas</strong> estão <strong>3 Pódios de 1º Lugar e Grand Prix no Campeonato Interlash Conference 2024, o 1º Lugar em campeonato internacional presencial na Itália em 2025, e o 1º lugar em Dubai, em 2026.</strong></p>
+          <p>Hoje, transformo toda a experiência construída nos campeonatos em <strong>MÉTODO, técnica e estratégias, formando profissionais que desejam elevar seus resultados, se destacar no mercado e alcançar reconhecimento.</strong></p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p>
+        <p>Desenvolvido por: @josielmorais_</p>
+      </footer>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
 </html>
