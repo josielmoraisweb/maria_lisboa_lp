@@ -1,99 +1,421 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#f8f6f0" />
-    <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
-    <title>Maria Lisboa | Lash Designer & Mentora</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="site-shell">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__art" aria-hidden="true"></div>
-        <p class="hero__champion"><strong>+ de 16x Campeã</strong><br />em Campeonatos<br />Internacionais</p>
-        <div class="hero__copy" data-reveal>
-          <h1 id="hero-title">Maria Lisboa</h1>
-          <p class="hero__tagline">Sua próxima conquista<br />começa <em>aqui.</em></p>
-          <p class="hero__scroll">Deslize para baixo para <strong>acessar links úteis</strong></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f6f0" />
+  <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
+  <title>Maria Lisboa | Lash Designer & Mentora</title>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+:root {
+  color-scheme: light;
+  --cream: #f8f6f0;
+  --dark: #2b1c16;
+  --text: #4b4949;
+  --muted: #75655b;
+  --rose: #a88f8c;
+  --rose-light: #e9e4e2;
+  --rose-mid: #cbbcb8;
+  --brown: #755044;
+  --brown-light: #a1816f;
+  --footer: #8f8382;
+  --gold-a: #d0993d;
+  --gold-b: #f1cd78;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--cream); scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'Poppins', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+.site {
+  width: min(100%, 800px);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.hero {
+  position: relative;
+  aspect-ratio: 800 / 783;
+  overflow: hidden;
+  background: #e3d6d0;
+}
+.hero-visual {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 71.4%;
+  background: url('./assets/hero_visual.webp') center top / 100% 100% no-repeat;
+}
+.hero-fade {
+  position: absolute;
+  z-index: 1;
+  inset: 51.5% 0 0;
+  background: linear-gradient(to bottom, rgba(248,246,240,0), rgba(248,246,240,.86) 27%, #f8f6f0 56%, #f8f6f0 100%);
+  pointer-events: none;
+}
+.champion {
+  position: absolute;
+  z-index: 3;
+  top: 33.1%;
+  left: 62.9%;
+  width: 25.8%;
+  margin: 0;
+  padding: .42em .62em;
+  border-radius: 999px;
+  background: rgba(227,214,208,.86);
+  color: var(--text);
+  font-size: clamp(7px, 2.28vw, 18.4px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.champion strong { font-weight: 600; }
+.hero-copy {
+  position: absolute;
+  z-index: 4;
+  left: 4%;
+  right: 4%;
+  bottom: 4.1%;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 9vw, 72px);
+  font-style: italic;
+  font-weight: 600;
+  line-height: .96;
+  letter-spacing: -0.045em;
+}
+.hero-tagline {
+  margin: clamp(8px, 1.6vw, 13px) 0 0;
+  color: var(--text);
+  font-size: clamp(20px, 4.75vw, 38px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: .93;
+  letter-spacing: -0.035em;
+}
+.hero-tagline em { color: var(--rose); font-style: italic; font-weight: 400; }
+.hero-scroll {
+  margin: clamp(11px, 2.5vw, 20px) 0 0;
+  color: var(--dark);
+  font-size: clamp(10px, 2.55vw, 20.4px);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.hero-scroll strong { color: var(--rose); font-weight: 600; }
+
+.offers {
+  display: grid;
+  gap: clamp(10px, 2.4vw, 19px);
+  padding: clamp(16px, 4.4vw, 35px) clamp(16px, 4.4vw, 35px) clamp(60px, 9vw, 72px);
+  background: var(--cream);
+}
+.offer {
+  position: relative;
+  aspect-ratio: 694.448 / 257.166;
+  overflow: hidden;
+  border-radius: clamp(16px, 3.75vw, 30px);
+  box-shadow: 0 1px 0 rgba(43,28,22,.04);
+}
+.offer-photo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.offer-copy {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-left .offer-copy { left: 0; width: 58%; padding: 4.1% 0 4.1% 6.5%; }
+.text-right .offer-copy { right: 0; width: 60%; padding: 4.1% 5.2%; }
+.text-left .offer-photo { right: 0; width: 52%; }
+.text-right .offer-photo { left: 0; width: 52%; }
+
+.offer-online { background: #2c1d16; }
+.offer-online .offer-photo { background-image: url('./assets/card_online_visual.webp'); }
+.offer-online .offer-copy { background: linear-gradient(90deg, rgba(44,29,22,.12), #2c1d16 18%, #2c1d16 100%); }
+.offer-live { background: linear-gradient(180deg, #9b8178, #352c29); }
+.offer-live .offer-photo { background-image: url('./assets/card_live_visual.webp'); }
+.offer-live .offer-copy { background: linear-gradient(90deg, rgba(117,80,68,.94), rgba(84,66,60,.96) 78%, rgba(65,52,48,.78)); }
+.offer-podio { background: #b9a6a4; }
+.offer-podio .offer-photo { background-image: url('./assets/card_podio_visual.webp'); }
+.offer-podio .offer-copy { background: linear-gradient(90deg, rgba(185,166,164,.3), #b9a6a4 20%, #b9a6a4 100%); }
+.offer-beginner,
+.offer-speaker,
+.offer-studio { background: #e9e4e2; }
+.offer-beginner .offer-photo { background-image: url('./assets/card_beginner_visual.webp'); }
+.offer-speaker .offer-photo { background-image: url('./assets/card_speaker_visual.webp'); }
+.offer-studio .offer-photo { background-image: url('./assets/card_studio_visual.webp'); }
+.offer-beginner .offer-copy,
+.offer-studio .offer-copy { background: linear-gradient(90deg, #e9e4e2 0%, rgba(233,228,226,.98) 78%, rgba(233,228,226,.76) 100%); }
+.offer-speaker .offer-copy { background: linear-gradient(90deg, rgba(233,228,226,.28), #e9e4e2 20%, #e9e4e2 100%); }
+
+.badge {
+  align-self: flex-start;
+  margin: 0 0 clamp(4px, .8vw, 7px);
+  padding: .25em 1.2em;
+  border-radius: 999px;
+  background: var(--rose-mid);
+  color: #62453a;
+  font-size: clamp(6px, 1.4vw, 11.3px);
+  font-weight: 500;
+  line-height: 1.3;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.badge-white { background: #fff; }
+.offer-title {
+  margin: 0;
+  color: var(--dark);
+  font-size: clamp(15px, 3.78vw, 30.25px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+.title-gold {
+  background: linear-gradient(90deg, var(--gold-a), var(--gold-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-white { color: #fff; }
+.offer-text {
+  max-width: 26em;
+  margin: clamp(4px, 1.05vw, 8px) 0 0;
+  color: var(--muted);
+  font-size: clamp(7px, 1.73vw, 13.85px);
+  font-weight: 400;
+  line-height: 1.43;
+}
+.offer-text strong { font-weight: 700; }
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2em;
+  align-self: flex-start;
+  margin-top: clamp(7px, 1.65vw, 13px);
+  padding: .72em 1.5em;
+  border: 1px solid #b99b88;
+  border-radius: 999px;
+  background: linear-gradient(155deg, var(--brown-light), var(--brown));
+  color: #fffaf4;
+  font-size: clamp(6px, 1.38vw, 11px);
+  font-weight: 600;
+  letter-spacing: .11em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+.cta-gold { border-color: #d4ac55; background: linear-gradient(90deg, var(--gold-a), var(--gold-b)); color: #313030; }
+.cta[href]:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.cta[href]:focus-visible { outline: 3px solid rgba(117,80,68,.4); outline-offset: 3px; }
+.cta[aria-disabled='true'] { cursor: default; }
+
+.about { background: var(--cream); }
+.about-visual {
+  aspect-ratio: 800 / 600;
+  background: url('./assets/about_visual.webp') center top / 100% 100% no-repeat;
+}
+.about-copy { padding: 0 10.1% clamp(42px, 8vw, 64px); background: var(--cream); }
+.about-eyebrow { margin: 0; color: var(--text); font-size: clamp(8px, 2vw, 16px); font-weight: 500; line-height: 1.4; text-transform: uppercase; }
+.about h2 { margin: .02em 0 .15em; color: #7d594c; font-size: clamp(31px, 7.5vw, 60px); font-style: italic; font-weight: 500; line-height: 1.08; letter-spacing: -0.075em; }
+.about-copy p:not(.about-eyebrow) { margin: 0 0 1em; color: rgba(43,28,22,.82); font-size: clamp(11px, 2.25vw, 18px); font-weight: 400; line-height: 1.5; }
+.about-copy strong { font-weight: 600; }
+.footer {
+  min-height: clamp(90px, 15.5vw, 124px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 16px);
+  padding: 18px 28px;
+  background: var(--footer);
+  color: #fff;
+  text-align: center;
+}
+.footer p { margin: 0; font-family: Arial, sans-serif; font-size: clamp(10px, 2.4vw, 19px); line-height: 1.2; }
+.footer p:last-child { font-size: clamp(9px, 2.1vw, 17px); font-weight: 300; }
+
+.js [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity 420ms ease, transform 420ms ease; }
+.js [data-reveal].is-visible { opacity: 1; transform: none; }
+
+@media (max-width: 520px) {
+  .text-left .offer-copy { width: 61%; padding-left: 5%; }
+  .text-right .offer-copy { width: 61%; padding-right: 4.5%; }
+  .offer-photo { width: 54% !important; }
+  .cta { letter-spacing: .07em; padding: .68em 1.15em; }
+  .champion { left: 63.5%; width: 26%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js [data-reveal], .js [data-reveal].is-visible, .cta { transition: none; transform: none; }
+}
+</style>
+</head>
+<body>
+  <main class="site" aria-label="Maria Lisboa, Lash Designer e Mentora">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-fade" aria-hidden="true"></div>
+      <p class="champion"><strong>+ de 16x Campeã</strong><br />em Campeonatos<br />Internacionais</p>
+      <div class="hero-copy" data-reveal>
+        <h1 id="hero-title">Maria Lisboa</h1>
+        <p class="hero-tagline">Sua próxima conquista<br />começa <em>aqui.</em></p>
+        <p class="hero-scroll">Deslize para baixo para <strong>acessar links úteis</strong></p>
+      </div>
+    </section>
+
+    <section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
+      <article class="offer offer-online text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge badge-white">Em breve</span>
+          <h2 class="offer-title title-gold">Mentoria Método<br />Lash Campeã</h2>
+          <p class="offer-text text-white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
+          <a class="cta cta-gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a>
         </div>
-      </section>
+      </article>
 
-      <section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
-        <article class="offer offer--online offer--sprite-1" data-reveal>
-          <div class="offer__copy offer__copy--right offer__copy--dark">
-            <span class="offer__badge offer__badge--white">Em breve</span>
-            <h2 class="offer__title offer__title--gold">Mentoria Método<br />Lash Campeã</h2>
-            <p class="offer__text offer__text--white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
-            <a class="cta cta--gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="offer offer--live offer--sprite-2" data-reveal>
-          <div class="offer__copy offer__copy--left offer__copy--brown">
-            <span class="offer__badge offer__badge--white">Mentoria ao vivo ou presencial</span>
-            <h2 class="offer__title offer__title--white">Mentoria Método<br />Lash Campeã</h2>
-            <p class="offer__text offer__text--white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
-            <a class="cta cta--brown" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="offer offer--podio offer--sprite-3" data-reveal>
-          <div class="offer__copy offer__copy--right offer__copy--rose">
-            <span class="offer__badge">Aperfeiçoamento</span>
-            <h2 class="offer__title">Sua Técnica no Pódio</h2>
-            <p class="offer__text">Tendências, visagismo e critérios de campeonato.</p>
-            <a class="cta cta--brown" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="offer offer--beginner offer--sprite-4" data-reveal>
-          <div class="offer__copy offer__copy--left offer__copy--cream">
-            <span class="offer__badge">Em breve</span>
-            <h2 class="offer__title">Curso Iniciante</h2>
-            <p class="offer__text">Novas vagas para começar uma trajetória de excelência.</p>
-            <a class="cta cta--brown" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="offer offer--speaker offer--sprite-5" data-reveal>
-          <div class="offer__copy offer__copy--right offer__copy--cream">
-            <span class="offer__badge">Eventos</span>
-            <h2 class="offer__title">Palestras</h2>
-            <p class="offer__text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
-            <a class="cta cta--brown" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-
-        <article class="offer offer--studio offer--sprite-6" data-reveal>
-          <div class="offer__copy offer__copy--left offer__copy--cream">
-            <span class="offer__badge">Estiva · MG</span>
-            <h2 class="offer__title">Agende seu horário<br />no studio</h2>
-            <p class="offer__text">Um atendimento com cuidado, técnica e precisão.</p>
-            <a class="cta cta--brown" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a>
-          </div>
-        </article>
-      </section>
-
-      <section class="about" aria-labelledby="about-title">
-        <div class="about__visual" aria-hidden="true"></div>
-        <div class="about__copy" data-reveal>
-          <p class="about__eyebrow">Quem sou eu</p>
-          <h2 id="about-title">Maria Lisboa</h2>
-          <p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, <strong>Mentora com selo internacional, jurada e palestrante.</strong></p>
-          <p>Com certificações nacionais e internacionais e <strong>+ de 16 premiações em campeonatos no Brasil e no exterior</strong>, nas categorias Clássico Fio a Fio, Fios Tecnológicos e Volume Russo.</p>
-          <p>Entre as <strong>principais conquistas</strong> estão <strong>3 Pódios de 1º Lugar e Grand Prix no Campeonato Interlash Conference 2024, o 1º Lugar em campeonato internacional presencial na Itália em 2025, e o 1º lugar em Dubai, em 2026.</strong></p>
-          <p>Hoje, transformo toda a experiência construída nos campeonatos em <strong>MÉTODO, técnica e estratégias, formando profissionais que desejam elevar seus resultados, se destacar no mercado e alcançar reconhecimento.</strong></p>
+      <article class="offer offer-live text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge badge-white">Mentoria ao vivo ou presencial</span>
+          <h2 class="offer-title text-white">Mentoria Método<br />Lash Campeã</h2>
+          <p class="offer-text text-white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
+          <a class="cta" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
-      </section>
+      </article>
 
-      <footer class="footer">
-        <p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p>
-        <p>Desenvolvido por: @josielmorais_</p>
-      </footer>
-    </main>
+      <article class="offer offer-podio text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Aperfeiçoamento</span>
+          <h2 class="offer-title">Sua Técnica no Pódio</h2>
+          <p class="offer-text">Tendências, visagismo e critérios de campeonato.</p>
+          <a class="cta" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
 
-    <script type="module" src="./app.js"></script>
-  </body>
+      <article class="offer offer-beginner text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Em breve</span>
+          <h2 class="offer-title">Curso Iniciante</h2>
+          <p class="offer-text">Novas vagas para começar uma trajetória de excelência.</p>
+          <a class="cta" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-speaker text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Eventos</span>
+          <h2 class="offer-title">Palestras</h2>
+          <p class="offer-text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
+          <a class="cta" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-studio text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Estiva · MG</span>
+          <h2 class="offer-title">Agende seu horário<br />no studio</h2>
+          <p class="offer-text">Um atendimento com cuidado, técnica e precisão.</p>
+          <a class="cta" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="about-visual" aria-hidden="true"></div>
+      <div class="about-copy" data-reveal>
+        <p class="about-eyebrow">Quem sou eu</p>
+        <h2 id="about-title">Maria Lisboa</h2>
+        <p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, <strong>Mentora com selo internacional, jurada e palestrante.</strong></p>
+        <p>Com certificações nacionais e internacionais e <strong>+ de 16 premiações em campeonatos no Brasil e no exterior</strong>, nas categorias Clássico Fio a Fio, Fios Tecnológicos e Volume Russo.</p>
+        <p>Entre as <strong>principais conquistas</strong> estão <strong>3 Pódios de 1º Lugar e Grand Prix no Campeonato Interlash Conference 2024, o 1º Lugar em campeonato internacional presencial na Itália em 2025, e o 1º lugar em Dubai, em 2026.</strong></p>
+        <p>Hoje, transformo toda a experiência construída nos campeonatos em <strong>MÉTODO, técnica e estratégias, formando profissionais que desejam elevar seus resultados, se destacar no mercado e alcançar reconhecimento.</strong></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p>
+      <p>Desenvolvido por: @josielmorais_</p>
+    </footer>
+  </main>
+  <script>const links = {
+  mentoriaOnline: "",
+  mentoriaAoVivo: "",
+  tecnicaPodio: "",
+  cursoIniciante: "",
+  palestras: "",
+  studio: ""
+};
+document.documentElement.classList.add('js');
+
+document.querySelectorAll('[data-link]').forEach((element) => {
+  const key = element.dataset.link;
+  const url = links[key]?.trim();
+
+  if (!url) {
+    element.removeAttribute('href');
+    element.setAttribute('aria-disabled', 'true');
+    element.setAttribute('tabindex', '-1');
+    return;
+  }
+
+  element.href = url;
+  element.target = '_blank';
+  element.rel = 'noopener noreferrer';
+  element.removeAttribute('aria-disabled');
+  element.removeAttribute('tabindex');
+});
+
+const revealItems = document.querySelectorAll('[data-reveal]');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -6% 0px' },
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+}
+</script>
+</body>
 </html>
