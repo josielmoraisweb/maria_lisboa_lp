@@ -1,0 +1,10 @@
+{
+  "name": "maria-lisboa-lp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets": "node scripts/fetch-assets.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
