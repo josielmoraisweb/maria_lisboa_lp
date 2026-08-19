@@ -20,20 +20,27 @@ jobs:
         with:
           node-version: 22
 
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Gerar assets exatos do Figma
+        run: npm run assets
+
       - name: Gerar build
         run: npm run build
 
-      - name: Persistir build para a Stay
+      - name: Persistir assets e build para a Stay
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/assets
           git add -f dist
-          if [ -n "$(git status --porcelain dist)" ]; then
-            git commit -m "build: persistir dist para Stay [skip ci]"
+          if [ -n "$(git status --porcelain public/assets dist)" ]; then
+            git commit -m "build: persistir Figma exato e dist [skip ci]"
             git push
           else
-            echo "Build já está atualizado no repositório."
+            echo "Assets e build já estão atualizados."
           fi
 
       - name: Gerar ZIP final para Stay
