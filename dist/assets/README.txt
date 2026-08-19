@@ -1,0 +1,1 @@
+Assets copiados do build para deploy estatico na StayCloud.
