@@ -1,38 +1,105 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#f8f6f0" />
-<meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
-<title>Maria Lisboa | Lash Designer & Mentora</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
-:root{--cream:#f8f6f0;--dark:#2b1c16;--text:#4b4949;--muted:#75655b;--rose:#a88f8c;--roseLight:#e9e4e2;--roseMid:#cbbcb8;--brown:#755044;--brownLight:#a1816f;--footer:#8f8382;--goldA:#d0993d;--goldB:#f1cd78;color-scheme:light}*{box-sizing:border-box}html{background:var(--cream);scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--cream);color:var(--dark);font-family:'Poppins',Arial,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}.site-shell{width:min(100%,800px);margin:0 auto;overflow:hidden;background:var(--cream)}
-.hero{position:relative;aspect-ratio:800/783;overflow:hidden;background:#e3d6d0}.hero__art{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/hero.png') center top/100% auto no-repeat}.hero:after{content:'';position:absolute;z-index:1;inset:52% 0 0;background:linear-gradient(to bottom,rgba(248,246,240,0),rgba(248,246,240,.92) 34%,#f8f6f0 62%);pointer-events:none}.hero__champion{position:absolute;z-index:3;top:32.5%;left:63.5%;width:23%;margin:0;padding:.45em .7em;border-radius:999px;background:rgba(227,214,208,.76);color:var(--text);font-size:clamp(7px,2.3vw,18px);font-style:italic;font-weight:500;line-height:1.12;letter-spacing:-.035em}.hero__copy{position:absolute;z-index:4;left:0;right:0;bottom:4.2%;display:flex;flex-direction:column;align-items:center;text-align:center}.hero h1{margin:0;color:var(--text);font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(38px,9vw,72px);font-style:italic;font-weight:500;line-height:.96;letter-spacing:-.04em}.hero__tagline{margin:clamp(8px,1.9vw,15px) 0 0;color:var(--text);font-size:clamp(20px,4.75vw,38px);font-style:italic;font-weight:500;line-height:.96;letter-spacing:-.035em}.hero__tagline em{color:var(--rose);font-weight:400}.hero__scroll{margin:clamp(10px,2.8vw,22px) 0 0;color:var(--dark);font-size:clamp(10px,2.75vw,22px);font-style:italic;font-weight:300;line-height:1.2}.hero__scroll strong{color:var(--rose);font-weight:600}
-.offers{display:grid;gap:clamp(10px,2.4vw,19px);padding:clamp(16px,4.4vw,35px);background:var(--cream)}.offer{position:relative;aspect-ratio:694/257;overflow:hidden;border-radius:clamp(16px,3.75vw,30px);background-color:var(--roseLight);background-image:url('https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/links.png');background-repeat:no-repeat;background-size:115.35% auto;background-position-x:center;box-shadow:0 1px 0 rgba(43,28,22,.04)}.offer--sprite-1{background-position-y:1.9%}.offer--sprite-2{background-position-y:20.6%}.offer--sprite-3{background-position-y:39.3%}.offer--sprite-4{background-position-y:58%}.offer--sprite-5{background-position-y:76.7%}.offer--sprite-6{background-position-y:95.4%}.offer__copy{position:absolute;z-index:2;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;padding:4.1% 5.2%}.offer__copy--left{left:0;width:59%}.offer__copy--right{right:0;width:60%}.offer__copy--dark{background:linear-gradient(90deg,rgba(44,29,22,.96),#2c1d16 18%,#2c1d16 100%)}.offer__copy--brown{background:linear-gradient(90deg,#8b746c,#554640 70%,#352c29)}.offer__copy--rose{background:linear-gradient(90deg,rgba(185,166,164,.97),#b9a6a4 18%,#b9a6a4 100%)}.offer__copy--cream{background:linear-gradient(90deg,#e9e4e2,rgba(233,228,226,.97) 78%,rgba(233,228,226,.9))}.offer__copy--right.offer__copy--cream{background:linear-gradient(90deg,rgba(233,228,226,.9),#e9e4e2 22%,#e9e4e2 100%)}.offer__copy--right.offer__copy--dark{background:linear-gradient(90deg,rgba(44,29,22,.9),#2c1d16 22%,#2c1d16 100%)}.offer__copy--right.offer__copy--rose{background:linear-gradient(90deg,rgba(185,166,164,.9),#b9a6a4 22%,#b9a6a4 100%)}.offer__badge{align-self:flex-start;margin:0 0 clamp(4px,.8vw,7px);padding:.28em 1.25em;border-radius:999px;background:var(--roseMid);color:#62453a;font-size:clamp(6px,1.4vw,11.3px);font-weight:500;line-height:1.3;text-transform:uppercase;white-space:nowrap}.offer__badge--white{background:#fff}.offer__title{margin:0;color:var(--dark);font-size:clamp(15px,3.78vw,30.25px);font-style:italic;font-weight:500;line-height:1.07;letter-spacing:-.04em}.offer__title--white{color:#fff}.offer__title--gold{background:linear-gradient(90deg,var(--goldA),var(--goldB));-webkit-background-clip:text;background-clip:text;color:transparent}.offer__text{max-width:27em;margin:clamp(4px,1.1vw,9px) 0 0;color:var(--muted);font-size:clamp(7px,1.74vw,13.9px);font-weight:500;line-height:1.45}.offer__text strong{font-weight:700;text-transform:uppercase}.offer__text--white{color:#fff}.cta{display:inline-flex;align-items:center;justify-content:space-between;align-self:flex-start;gap:1.2em;min-width:58%;margin-top:clamp(7px,1.8vw,14px);padding:.72em 1.55em;border:1px solid #b99b88;border-radius:999px;color:#fffaf4;font-size:clamp(6px,1.42vw,11.35px);font-weight:600;letter-spacing:.12em;line-height:1.2;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:transform .16s ease,filter .16s ease}.cta--brown{background:linear-gradient(155deg,var(--brownLight),var(--brown))}.cta--gold{border-color:#d4ac55;background:linear-gradient(90deg,var(--goldA),var(--goldB));color:#313030}.cta[href]:hover{filter:brightness(1.06);transform:translateY(-1px)}.cta[aria-disabled='true']{cursor:default}
-.about{background:var(--cream)}.about__visual{position:relative;aspect-ratio:800/610;overflow:hidden;background:url('https://raw.githubusercontent.com/imthiagopantoja/maria_lisboa_lp/main/public/assets/about.png') center top/100% auto no-repeat}.about__visual:after{content:'';position:absolute;inset:auto 0 0;height:24%;background:linear-gradient(to bottom,rgba(248,246,240,0),#f8f6f0 95%)}.about__copy{padding:0 10.1% clamp(42px,8vw,64px);background:var(--cream)}.about__eyebrow{margin:0;color:var(--text);font-size:clamp(8px,2vw,16px);font-weight:500;line-height:1.4;text-transform:uppercase}.about h2{margin:.04em 0 .15em;color:#7d594c;font-size:clamp(31px,7.5vw,60px);font-style:italic;font-weight:500;line-height:1.1;letter-spacing:-.08em}.about__copy p:not(.about__eyebrow){margin:0 0 1em;color:rgba(43,28,22,.82);font-size:clamp(11px,2.25vw,18px);font-weight:400;line-height:1.5}.about__copy strong{font-weight:600}.footer{min-height:clamp(90px,15.5vw,124px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2vw,16px);padding:18px 28px;background:var(--footer);color:#fff;text-align:center}.footer p{margin:0;font-family:Arial,sans-serif;font-size:clamp(10px,2.4vw,19px);line-height:1.2}.footer p:last-child{font-size:clamp(9px,2.1vw,17px);font-weight:300}.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .42s ease,transform .42s ease}.js [data-reveal].is-visible{opacity:1;transform:none}@media(max-width:520px){.offer__copy{padding:3.7% 4.3%}.offer__copy--left,.offer__copy--right{width:62%}.cta{min-width:0;padding-inline:1.2em;letter-spacing:.08em}.hero__champion{left:62%;width:25%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js [data-reveal],.js [data-reveal].is-visible,.cta{transition:none;transform:none}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f8f6f0" />
+  <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
+  <title>Maria Lisboa | Lash Designer & Mentora</title>
+  <style>/*__INLINE_CSS__*/</style>
 </head>
 <body>
-<main class="site-shell">
-<section class="hero" aria-labelledby="hero-title"><div class="hero__art" aria-hidden="true"></div><p class="hero__champion"><strong>+ de 16x Campeã</strong><br>em Campeonatos<br>Internacionais</p><div class="hero__copy" data-reveal><h1 id="hero-title">Maria Lisboa</h1><p class="hero__tagline">Sua próxima conquista<br>começa <em>aqui.</em></p><p class="hero__scroll">Deslize para baixo para <strong>acessar links úteis</strong></p></div></section>
-<section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
-<article class="offer offer--sprite-1" data-reveal><div class="offer__copy offer__copy--right offer__copy--dark"><span class="offer__badge offer__badge--white">Em breve</span><h2 class="offer__title offer__title--gold">Mentoria Método<br>Lash Campeã</h2><p class="offer__text offer__text--white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p><a class="cta cta--gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a></div></article>
-<article class="offer offer--sprite-2" data-reveal><div class="offer__copy offer__copy--left offer__copy--brown"><span class="offer__badge offer__badge--white">Mentoria ao vivo ou presencial</span><h2 class="offer__title offer__title--white">Mentoria Método<br>Lash Campeã</h2><p class="offer__text offer__text--white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p><a class="cta cta--brown" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a></div></article>
-<article class="offer offer--sprite-3" data-reveal><div class="offer__copy offer__copy--right offer__copy--rose"><span class="offer__badge">Aperfeiçoamento</span><h2 class="offer__title">Sua Técnica no Pódio</h2><p class="offer__text">Tendências, visagismo e critérios de campeonato.</p><a class="cta cta--brown" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a></div></article>
-<article class="offer offer--sprite-4" data-reveal><div class="offer__copy offer__copy--left offer__copy--cream"><span class="offer__badge">Em breve</span><h2 class="offer__title">Curso Iniciante</h2><p class="offer__text">Novas vagas para começar uma trajetória de excelência.</p><a class="cta cta--brown" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a></div></article>
-<article class="offer offer--sprite-5" data-reveal><div class="offer__copy offer__copy--right offer__copy--cream"><span class="offer__badge">Eventos</span><h2 class="offer__title">Palestras</h2><p class="offer__text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p><a class="cta cta--brown" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a></div></article>
-<article class="offer offer--sprite-6" data-reveal><div class="offer__copy offer__copy--left offer__copy--cream"><span class="offer__badge">Estiva · MG</span><h2 class="offer__title">Agende seu horário<br>no studio</h2><p class="offer__text">Um atendimento com cuidado, técnica e precisão.</p><a class="cta cta--brown" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a></div></article>
-</section>
-<section class="about" aria-labelledby="about-title"><div class="about__visual" aria-hidden="true"></div><div class="about__copy" data-reveal><p class="about__eyebrow">Quem sou eu</p><h2 id="about-title">Maria Lisboa</h2><p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, <strong>Mentora com selo internacional, jurada e palestrante.</strong></p><p>Com certificações nacionais e internacionais e <strong>+ de 16 premiações em campeonatos no Brasil e no exterior</strong>, nas categorias Clássico Fio a Fio, Fios Tecnológicos e Volume Russo.</p><p>Entre as <strong>principais conquistas</strong> estão <strong>3 Pódios de 1º Lugar e Grand Prix no Campeonato Interlash Conference 2024, o 1º Lugar em campeonato internacional presencial na Itália em 2025, e o 1º lugar em Dubai, em 2026.</strong></p><p>Hoje, transformo toda a experiência construída nos campeonatos em <strong>MÉTODO, técnica e estratégias, formando profissionais que desejam elevar seus resultados, se destacar no mercado e alcançar reconhecimento.</strong></p></div></section>
-<footer class="footer"><p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p><p>Desenvolvido por: @josielmorais_</p></footer>
-</main>
-<script>
-document.documentElement.classList.add('js');
-const links={mentoriaOnline:'',mentoriaAoVivo:'',tecnicaPodio:'',cursoIniciante:'',palestras:'',studio:''};
-document.querySelectorAll('[data-link]').forEach(el=>{const url=(links[el.dataset.link]||'').trim();if(!url){el.removeAttribute('href');el.setAttribute('aria-disabled','true');el.setAttribute('tabindex','-1');return}el.href=url;el.target='_blank';el.rel='noopener noreferrer'});
-const items=document.querySelectorAll('[data-reveal]');if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');obs.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});items.forEach(item=>obs.observe(item))}else{items.forEach(item=>item.classList.add('is-visible'))}
-</script>
+  <main class="site" aria-label="Maria Lisboa, Lash Designer e Mentora">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-hidden="true"></div>
+      <div class="hero-fade" aria-hidden="true"></div>
+      <p class="champion"><strong>+ de 16x Campeã</strong><br />em Campeonatos<br />Internacionais</p>
+      <div class="hero-copy" data-reveal>
+        <h1 id="hero-title">Maria Lisboa</h1>
+        <p class="hero-tagline">Sua próxima conquista<br />começa <em>aqui.</em></p>
+        <p class="hero-scroll">Deslize para baixo para <strong>acessar links úteis</strong></p>
+      </div>
+    </section>
+
+    <section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
+      <article class="offer offer-online text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge badge-white">Em breve</span>
+          <h2 class="offer-title title-gold">Mentoria Método<br />Lash Campeã</h2>
+          <p class="offer-text text-white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
+          <a class="cta cta-gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-live text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge badge-white">Mentoria ao vivo ou presencial</span>
+          <h2 class="offer-title text-white">Mentoria Método<br />Lash Campeã</h2>
+          <p class="offer-text text-white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
+          <a class="cta" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-podio text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Aperfeiçoamento</span>
+          <h2 class="offer-title">Sua Técnica no Pódio</h2>
+          <p class="offer-text">Tendências, visagismo e critérios de campeonato.</p>
+          <a class="cta" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-beginner text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Em breve</span>
+          <h2 class="offer-title">Curso Iniciante</h2>
+          <p class="offer-text">Novas vagas para começar uma trajetória de excelência.</p>
+          <a class="cta" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-speaker text-right" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Eventos</span>
+          <h2 class="offer-title">Palestras</h2>
+          <p class="offer-text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
+          <a class="cta" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="offer offer-studio text-left" data-reveal>
+        <div class="offer-photo" aria-hidden="true"></div>
+        <div class="offer-copy">
+          <span class="badge">Estiva · MG</span>
+          <h2 class="offer-title">Agende seu horário<br />no studio</h2>
+          <p class="offer-text">Um atendimento com cuidado, técnica e precisão.</p>
+          <a class="cta" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <div class="about-visual" aria-hidden="true"></div>
+      <div class="about-copy" data-reveal>
+        <p class="about-eyebrow">Quem sou eu</p>
+        <h2 id="about-title">Maria Lisboa</h2>
+        <p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, <strong>Mentora com selo internacional, jurada e palestrante.</strong></p>
+        <p>Com certificações nacionais e internacionais e <strong>+ de 16 premiações em campeonatos no Brasil e no exterior</strong>, nas categorias Clássico Fio a Fio, Fios Tecnológicos e Volume Russo.</p>
+        <p>Entre as <strong>principais conquistas</strong> estão <strong>3 Pódios de 1º Lugar e Grand Prix no Campeonato Interlash Conference 2024, o 1º Lugar em campeonato internacional presencial na Itália em 2025, e o 1º lugar em Dubai, em 2026.</strong></p>
+        <p>Hoje, transformo toda a experiência construída nos campeonatos em <strong>MÉTODO, técnica e estratégias, formando profissionais que desejam elevar seus resultados, se destacar no mercado e alcançar reconhecimento.</strong></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p>
+      <p>Desenvolvido por: @josielmorais_</p>
+    </footer>
+  </main>
+  <script>/*__INLINE_JS__*/</script>
 </body>
 </html>
