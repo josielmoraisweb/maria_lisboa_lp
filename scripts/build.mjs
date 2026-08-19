@@ -1,9 +1,15 @@
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
 const src = path.join(root, "src");
+const publicAssets = path.join(root, "public", "assets");
+const distAssets = path.join(dist, "assets");
+
+await rm(dist, { recursive: true, force: true });
+await mkdir(distAssets, { recursive: true });
+await cp(publicAssets, distAssets, { recursive: true });
 
 const [template, css, js, config] = await Promise.all([
   readFile(path.join(src, "index.html"), "utf8"),
@@ -27,4 +33,4 @@ await writeFile(path.join(dist, "app.js"), js, "utf8");
 await writeFile(path.join(dist, "config.js"), config, "utf8");
 
 const files = await readdir(dist, { recursive: true });
-console.log(`Build concluído com ${files.length} itens em dist/. Assets WebP preservados.`);
+console.log(`Build concluído com ${files.length} itens em dist/. Layout 800px preservado e assets otimizados copiados.`);
