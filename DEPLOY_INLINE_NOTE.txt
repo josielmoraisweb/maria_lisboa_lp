@@ -1,0 +1,1 @@
+StayCloud compatibility: critical CSS and JS are also inlined in index.html. Source CSS and JS files remain in src and dist for maintenance.
