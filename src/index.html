@@ -9,82 +9,93 @@
   <style>/*__INLINE_CSS__*/</style>
 </head>
 <body>
-  <main class="site" aria-label="Maria Lisboa, Lash Designer e Mentora">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-visual" aria-hidden="true"></div>
-      <div class="hero-fade" aria-hidden="true"></div>
+  <main class="site">
+    <section class="hero section-box" aria-labelledby="hero-title">
+      <div class="hero-bg hero-bg-one" aria-hidden="true"></div>
+      <div class="hero-bg hero-bg-two" aria-hidden="true"></div>
+      <div class="hero-bg hero-bg-three" aria-hidden="true"></div>
+      <img class="hero-person" src="./assets/hero_person.webp" alt="" />
+      <div class="hero-glow" aria-hidden="true"></div>
       <p class="champion"><strong>+ de 16x Campeã</strong><br />em Campeonatos<br />Internacionais</p>
-      <div class="hero-copy" data-reveal>
+      <div class="hero-content" data-reveal>
         <h1 id="hero-title">Maria Lisboa</h1>
         <p class="hero-tagline">Sua próxima conquista<br />começa <em>aqui.</em></p>
         <p class="hero-scroll">Deslize para baixo para <strong>acessar links úteis</strong></p>
       </div>
     </section>
 
-    <section class="offers" aria-label="Cursos, mentorias, palestras e agendamento">
-      <article class="offer offer-online text-right" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge badge-white">Em breve</span>
-          <h2 class="offer-title title-gold">Mentoria Método<br />Lash Campeã</h2>
-          <p class="offer-text text-white"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
-          <a class="cta cta-gold" data-link="mentoriaOnline">Entre no grupo de espera <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+    <section class="links-section" aria-label="Cursos, mentorias, palestras e agendamento">
+      <div class="links-container">
+        <article class="link-card card-online" data-reveal>
+          <img class="card-image card-image-right" src="./assets/card_online_person.webp" alt="" />
+          <div class="card-overlay card-overlay-dark" aria-hidden="true"></div>
+          <div class="card-copy card-copy-left card-copy-online">
+            <span class="pill pill-light">Em breve</span>
+            <h2 class="card-title card-title-gold">Mentoria Método Lash Campeã</h2>
+            <p class="card-text card-text-light"><strong>Curso on-line</strong> com uma mentoria 100% gravada.</p>
+            <a class="card-button card-button-gold" data-link="mentoriaOnline">Entre no grupo de espera <span>↗</span></a>
+          </div>
+        </article>
 
-      <article class="offer offer-live text-left" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge badge-white">Mentoria ao vivo ou presencial</span>
-          <h2 class="offer-title text-white">Mentoria Método<br />Lash Campeã</h2>
-          <p class="offer-text text-white"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
-          <a class="cta" data-link="mentoriaAoVivo">Chamar no WhatsApp <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+        <article class="link-card card-live" data-reveal>
+          <img class="card-image card-image-right" src="./assets/card_live_person.webp" alt="" />
+          <div class="card-noise" aria-hidden="true"></div>
+          <div class="card-copy card-copy-left card-copy-live">
+            <span class="pill pill-light pill-wide">Mentoria ao vivo ou presencial</span>
+            <h2 class="card-title card-title-light">Mentoria Método Lash Campeã</h2>
+            <p class="card-text card-text-light"><strong>Mentoria de 3 meses</strong> de acompanhamento para campeonato.</p>
+            <a class="card-button" data-link="mentoriaAoVivo">Chamar no WhatsApp <span>↗</span></a>
+          </div>
+        </article>
 
-      <article class="offer offer-podio text-right" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge">Aperfeiçoamento</span>
-          <h2 class="offer-title">Sua Técnica no Pódio</h2>
-          <p class="offer-text">Tendências, visagismo e critérios de campeonato.</p>
-          <a class="cta" data-link="tecnicaPodio">Quero garantir minha vaga <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+        <article class="link-card card-podio" data-reveal>
+          <div class="podio-mini podio-mini-top"><img src="./assets/podio_detail_top.webp" alt="" /></div>
+          <div class="podio-mini podio-mini-bottom"><img src="./assets/podio_detail_bottom.webp" alt="" /></div>
+          <img class="card-image podio-main" src="./assets/card_podio_person.webp" alt="" />
+          <div class="card-copy card-copy-right card-copy-podio">
+            <span class="pill">Aperfeiçoamento</span>
+            <h2 class="card-title">Sua Técnica no Pódio</h2>
+            <p class="card-text">Tendências, visagismo e critérios de campeonato.</p>
+            <a class="card-button" data-link="tecnicaPodio">Quero garantir minha vaga <span>↗</span></a>
+          </div>
+        </article>
 
-      <article class="offer offer-beginner text-left" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge">Em breve</span>
-          <h2 class="offer-title">Curso Iniciante</h2>
-          <p class="offer-text">Novas vagas para começar uma trajetória de excelência.</p>
-          <a class="cta" data-link="cursoIniciante">Falar no WhatsApp <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+        <article class="link-card card-beginner" data-reveal>
+          <img class="card-image card-image-right beginner-person" src="./assets/card_beginner_person.webp" alt="" />
+          <div class="card-copy card-copy-left card-copy-beginner">
+            <span class="pill">Em breve</span>
+            <h2 class="card-title">Curso Iniciante</h2>
+            <p class="card-text">Novas vagas para começar uma trajetória de excelência.</p>
+            <a class="card-button card-button-short" data-link="cursoIniciante">Falar no WhatsApp <span>↗</span></a>
+          </div>
+        </article>
 
-      <article class="offer offer-speaker text-right" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge">Eventos</span>
-          <h2 class="offer-title">Palestras</h2>
-          <p class="offer-text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
-          <a class="cta" data-link="palestras">Contratar palestra <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+        <article class="link-card card-speaker" data-reveal>
+          <img class="card-image card-image-left speaker-person" src="./assets/card_speaker_person.webp" alt="" />
+          <div class="card-copy card-copy-right card-copy-speaker">
+            <span class="pill">Eventos</span>
+            <h2 class="card-title">Palestras</h2>
+            <p class="card-text">Conhecimento, técnica e inspiração para transformar profissionais no universo dos cílios.</p>
+            <a class="card-button" data-link="palestras">Contratar palestra <span>↗</span></a>
+          </div>
+        </article>
 
-      <article class="offer offer-studio text-left" data-reveal>
-        <div class="offer-photo" aria-hidden="true"></div>
-        <div class="offer-copy">
-          <span class="badge">Estiva · MG</span>
-          <h2 class="offer-title">Agende seu horário<br />no studio</h2>
-          <p class="offer-text">Um atendimento com cuidado, técnica e precisão.</p>
-          <a class="cta" data-link="studio">Agendar no WhatsApp <span aria-hidden="true">↗</span></a>
-        </div>
-      </article>
+        <article class="link-card card-studio" data-reveal>
+          <img class="studio-eye" src="./assets/card_studio_eye.webp" alt="" />
+          <div class="card-copy card-copy-left card-copy-studio">
+            <span class="pill">Estiva · MG</span>
+            <h2 class="card-title">Agende seu horário no studio</h2>
+            <p class="card-text">Um atendimento com cuidado, técnica e precisão.</p>
+            <a class="card-button card-button-short" data-link="studio">Agendar no WhatsApp <span>↗</span></a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="about" aria-labelledby="about-title">
-      <div class="about-visual" aria-hidden="true"></div>
+    <section class="about section-box" aria-labelledby="about-title">
+      <div class="about-word" aria-hidden="true">MARIA LISBOA</div>
+      <img class="about-person" src="./assets/about_person.webp" alt="" />
+      <div class="about-fade" aria-hidden="true"></div>
       <div class="about-copy" data-reveal>
         <p class="about-eyebrow">Quem sou eu</p>
         <h2 id="about-title">Maria Lisboa</h2>
@@ -96,7 +107,7 @@
     </section>
 
     <footer class="footer">
-      <p>© Copyright Maria Lisboa 2026 · Todos os direitos reservados.</p>
+      <p>© Copyright Maria Lisboa 2026 - Todos os direitos reservados.</p>
       <p>Desenvolvido por: @josielmorais_</p>
     </footer>
   </main>
