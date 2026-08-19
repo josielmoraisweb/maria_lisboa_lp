@@ -170,6 +170,14 @@ function fitArtboard() {
 fitArtboard();
 window.addEventListener('resize', fitArtboard, { passive: true });
 
+const onlineCard = document.querySelector('.card-online');
+const onlineCopy = document.querySelector('.copy-online');
+const onlineCta = document.querySelector('.cta-online');
+
+if (onlineCard) onlineCard.style.transform = 'scaleX(-1)';
+if (onlineCopy) onlineCopy.style.transform = 'scaleX(-1)';
+if (onlineCta) onlineCta.style.transform = 'scaleX(-1)';
+
 for (const element of document.querySelectorAll('[data-link]')) {
   const key = element.dataset.link;
   const url = links[key]?.trim();
