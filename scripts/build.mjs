@@ -33,4 +33,4 @@ await writeFile(path.join(dist, "app.js"), js, "utf8");
 await writeFile(path.join(dist, "config.js"), config, "utf8");
 
 const files = await readdir(dist, { recursive: true });
-console.log(`Build concluído com ${files.length} itens em dist/. Layout 800px preservado e assets otimizados copiados.`);
+console.log(`Build concluído com ${files.length} itens em dist/. Layouts mobile e desktop preservados e assets otimizados copiados.`);
