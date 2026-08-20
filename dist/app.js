@@ -34,6 +34,24 @@ const buttonTargets = [...document.querySelectorAll('.hotspot')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.body.classList.add('motion-ready');
 
+if (!reduceMotion) {
+  for (const button of buttonTargets) {
+    button.addEventListener('pointerdown', () => {
+      const card = button.closest('.site').querySelector(`.card-effect[data-card="${button.dataset.card}"]`);
+      if (!card) return;
+      card.classList.remove('card-pop');
+      void card.offsetWidth;
+      card.classList.add('card-pop');
+    });
+    const card = button.closest('.site').querySelector(`.card-effect[data-card="${button.dataset.card}"]`);
+    card?.addEventListener('animationend', (event) => {
+      if (event.animationName === 'card-click-pop') {
+        card.classList.remove('card-pop');
+      }
+    });
+  }
+}
+
 if (reduceMotion || !('IntersectionObserver' in window)) {
   revealTargets.forEach((element) => element.classList.add('is-visible'));
   buttonTargets.forEach((element) => element.classList.add('button-visible'));
