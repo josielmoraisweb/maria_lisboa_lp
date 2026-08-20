@@ -30,11 +30,13 @@ for (const element of document.querySelectorAll('[data-link]')) {
 }
 
 const revealTargets = [...document.querySelectorAll('.reveal')];
+const buttonTargets = [...document.querySelectorAll('.hotspot')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.body.classList.add('motion-ready');
 
 if (reduceMotion || !('IntersectionObserver' in window)) {
   revealTargets.forEach((element) => element.classList.add('is-visible'));
+  buttonTargets.forEach((element) => element.classList.add('button-visible'));
 } else {
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -44,4 +46,13 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
     }
   }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
   revealTargets.forEach((element) => observer.observe(element));
+
+  const buttonObserver = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('button-visible');
+      buttonObserver.unobserve(entry.target);
+    }
+  }, { threshold: 0.65 });
+  buttonTargets.forEach((element) => buttonObserver.observe(element));
 }
