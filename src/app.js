@@ -1,26 +1,53 @@
 import { links } from './config.js';
 
-const DESIGN_WIDTH = 800;
-const DESIGN_HEIGHT = 3882.254;
+const MOBILE_BREAKPOINT = 900;
+const MOBILE_DESIGN = { width: 800, height: 3882.254 };
+const DESKTOP_DESIGN = { width: 1920, height: 3502.266 };
 const shell = document.getElementById('stage-shell');
 
 function fitArtboard() {
-  const scale = Math.min(1, window.innerWidth / DESIGN_WIDTH);
+  const design = window.innerWidth <= MOBILE_BREAKPOINT ? MOBILE_DESIGN : DESKTOP_DESIGN;
+  const scale = Math.min(1, window.innerWidth / design.width);
   document.documentElement.style.setProperty('--scale', String(scale));
-  shell.style.width = `${DESIGN_WIDTH * scale}px`;
-  shell.style.height = `${DESIGN_HEIGHT * scale}px`;
+  shell.style.width = `${design.width * scale}px`;
+  shell.style.height = `${design.height * scale}px`;
 }
 
 fitArtboard();
 window.addEventListener('resize', fitArtboard, { passive: true });
 
-const onlineCard = document.querySelector('.card-online');
-const onlineCopy = document.querySelector('.copy-online');
-const onlineCta = document.querySelector('.cta-online');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cards = [...document.querySelectorAll('.link-card')];
+const revealTargets = [
+  ...cards,
+  document.querySelector('.about-person-wrap'),
+  document.querySelector('.about-eyebrow'),
+  document.querySelector('.about-title'),
+  document.querySelector('.about-copy')
+].filter(Boolean);
 
-if (onlineCard) onlineCard.style.transform = 'scaleX(-1)';
-if (onlineCopy) onlineCopy.style.transform = 'scaleX(-1)';
-if (onlineCta) onlineCta.style.transform = 'scaleX(-1)';
+revealTargets.forEach((element, index) => {
+  element.classList.add('reveal');
+  if (element.classList.contains('link-card')) {
+    element.classList.add(index % 2 === 0 ? 'reveal-left' : 'reveal-right');
+  }
+});
+
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  revealTargets.forEach((element) => element.classList.add('is-visible'));
+} else {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.14, rootMargin: '0px 0px -7% 0px' });
+
+  revealTargets.forEach((element) => observer.observe(element));
+}
+
+requestAnimationFrame(() => document.body.classList.add('page-ready'));
 
 for (const element of document.querySelectorAll('[data-link]')) {
   const key = element.dataset.link;
