@@ -6,30 +6,7 @@
   <meta name="theme-color" content="#f8f6f0" />
   <meta name="description" content="Maria Lisboa, Lash Designer, mentora, jurada e palestrante." />
   <title>Maria Lisboa | Lash Designer & Mentora</title>
-  <style>:root{--cream:#f8f6f0;--scale:1}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--cream)}
-html{scroll-behavior:smooth}
-body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.stage-shell{position:relative;width:800px;height:3791px;margin:0 auto}
-.site{position:absolute;inset:0 auto auto 0;overflow:hidden;background:var(--cream);transform:scale(var(--scale));transform-origin:top left}
-.site-mobile{display:block;width:800px;height:3791px}
-.site-desktop{display:none;width:1920px;height:2949px}
-.slice{position:absolute;left:0;top:var(--y);width:100%;height:var(--h);overflow:hidden;background:var(--cream)}
-.slice-content{position:absolute;inset:0;overflow:hidden}
-.slice img{position:absolute;left:0;top:calc(-1 * var(--y));display:block;width:100%;height:auto;max-width:none;pointer-events:none;user-select:none}
-.hotspot{position:absolute;z-index:20;left:var(--x);top:var(--y);width:var(--w);height:var(--h);border-radius:30px;text-decoration:none}
-.hotspot[href]{cursor:pointer}
-.hotspot[href]:focus-visible{outline:5px solid rgba(117,80,68,.8);outline-offset:4px}
-.hotspot[aria-disabled='true']{pointer-events:none}
-.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-.motion-ready .reveal .slice-content{opacity:0;transform:translateY(48px);transition:opacity .72s ease,transform .82s cubic-bezier(.2,.75,.25,1);will-change:opacity,transform}
-.motion-ready .reveal-left .slice-content{transform:translate(-44px,28px)}
-.motion-ready .reveal-right .slice-content{transform:translate(44px,28px)}
-.motion-ready .reveal.is-visible .slice-content{opacity:1;transform:translate(0,0)}
-@media(min-width:901px){.stage-shell{width:1920px;height:2949px}.site-mobile{display:none}.site-desktop{display:block}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.motion-ready .reveal .slice-content{opacity:1;transform:none;transition:none}}
-</style>
+  <style>/*__INLINE_CSS__*/</style>
 </head>
 <body>
   <div class="stage-shell" id="stage-shell">
@@ -70,59 +47,6 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
       <div class="sr-only"><h1>Maria Lisboa</h1><p>Mais de 16 vezes campeã em campeonatos internacionais.</p><h2>Quem sou eu</h2><p>Proprietária do Studio MF Beauty Lash, Lash Designer há mais de 5 anos, mentora com selo internacional, jurada e palestrante.</p></div>
     </main>
   </div>
-  <script>const links = {
-  mentoriaOnline: "",
-  mentoriaAoVivo: "",
-  tecnicaPodio: "",
-  cursoIniciante: "",
-  palestras: "",
-  studio: ""
-};
-const MOBILE_BREAKPOINT = 900;
-const MOBILE_DESIGN = { width: 800, height: 3791 };
-const DESKTOP_DESIGN = { width: 1920, height: 2949 };
-const shell = document.getElementById('stage-shell');
-
-function fitArtboard() {
-  const design = window.innerWidth <= MOBILE_BREAKPOINT ? MOBILE_DESIGN : DESKTOP_DESIGN;
-  const scale = Math.min(1, window.innerWidth / design.width);
-  document.documentElement.style.setProperty('--scale', String(scale));
-  shell.style.width = `${design.width * scale}px`;
-  shell.style.height = `${design.height * scale}px`;
-}
-
-fitArtboard();
-window.addEventListener('resize', fitArtboard, { passive: true });
-
-for (const element of document.querySelectorAll('[data-link]')) {
-  const url = links[element.dataset.link]?.trim();
-  if (!url) {
-    element.removeAttribute('href');
-    element.setAttribute('aria-disabled', 'true');
-    element.setAttribute('tabindex', '-1');
-    continue;
-  }
-  element.href = url;
-  element.target = '_blank';
-  element.rel = 'noopener noreferrer';
-}
-
-const revealTargets = [...document.querySelectorAll('.reveal')];
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-document.body.classList.add('motion-ready');
-
-if (reduceMotion || !('IntersectionObserver' in window)) {
-  revealTargets.forEach((element) => element.classList.add('is-visible'));
-} else {
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    }
-  }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
-  revealTargets.forEach((element) => observer.observe(element));
-}
-</script>
+  <script>/*__INLINE_JS__*/</script>
 </body>
 </html>

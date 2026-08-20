@@ -12,9 +12,9 @@ await mkdir(distAssets, { recursive: true });
 await cp(publicAssets, distAssets, { recursive: true });
 
 const [template, css, js, config] = await Promise.all([
-  readFile(path.join(src, "index.html"), "utf8"),
-  readFile(path.join(src, "styles.css"), "utf8"),
-  readFile(path.join(src, "app.js"), "utf8"),
+  readFile(path.join(src, "exact.html"), "utf8"),
+  readFile(path.join(src, "exact.css"), "utf8"),
+  readFile(path.join(src, "exact.js"), "utf8"),
   readFile(path.join(src, "config.js"), "utf8"),
 ]);
 

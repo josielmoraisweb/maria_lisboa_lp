@@ -2,7 +2,7 @@
 
 Implementação da página **Maria Lisboa | Lash Designer & Mentora**, baseada no frame do Figma da página `Lp -bio`.
 
-O site usa os frames `Maria Lisboa Links Mobile` e `Maria Lisboa Links Desktop`, alterna automaticamente o layout conforme a largura da tela e revela os cards e a seção de apresentação durante a rolagem. Todas as fotografias usadas no build são arquivos WebP; os SVGs são mantidos apenas para as formas vetoriais decorativas.
+O site usa as exportações oficiais e completas dos frames `Maria Lisboa Links Mobile` (800×3791) e `Maria Lisboa Links Desktop` (1920×2949), alternando automaticamente o layout conforme a largura da tela. As exportações são WebP lossless e foram verificadas pixel a pixel contra os PNGs fornecidos pelo Figma. As faixas dos cards e da apresentação continuam com animações de entrada durante a rolagem, e as áreas dos cards permanecem clicáveis.
 
 ## Fluxo
 
