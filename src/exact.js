@@ -36,15 +36,21 @@ document.body.classList.add('motion-ready');
 
 if (!reduceMotion) {
   for (const button of buttonTargets) {
-    button.addEventListener('pointerdown', () => {
-      const card = button.closest('.site').querySelector(`.card-effect[data-card="${button.dataset.card}"]`);
-      if (!card) return;
+    const card = button.closest('.site').querySelector(`.card-effect[data-card="${button.dataset.card}"]`);
+    if (!card) continue;
+
+    const triggerCardPop = () => {
       card.classList.remove('card-pop');
       void card.offsetWidth;
       card.classList.add('card-pop');
+    };
+
+    button.addEventListener('pointerdown', triggerCardPop);
+    button.addEventListener('click', (event) => {
+      if (event.detail === 0) triggerCardPop();
     });
-    const card = button.closest('.site').querySelector(`.card-effect[data-card="${button.dataset.card}"]`);
-    card?.addEventListener('animationend', (event) => {
+
+    card.addEventListener('animationend', (event) => {
       if (event.animationName === 'card-click-pop') {
         card.classList.remove('card-pop');
       }
