@@ -23,8 +23,8 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .hotspot:focus-visible{outline:4px solid rgba(117,80,68,.55);outline-offset:4px}
 .hotspot:active{transition-duration:.09s}
 .card-effect{position:absolute;z-index:19;left:var(--x);top:var(--y);width:var(--w);height:var(--h);overflow:hidden;border-radius:30px;pointer-events:none;transform-origin:center;isolation:isolate}
-.site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
-.site-desktop .card-effect.card-pop{background:url('./assets/figma_desktop_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/1920px 2949px no-repeat}
+.site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp?v=320c2ad') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
+.site-desktop .card-effect.card-pop{background:url('./assets/figma_desktop_exact.webp?v=320c2ad') calc(-1 * var(--x)) calc(-1 * var(--y))/1920px 2949px no-repeat}
 .card-effect.card-pop{z-index:21;animation:card-click-pop .42s cubic-bezier(.2,.8,.25,1) both;will-change:transform,filter}
 .hotspot.button-visible::before{animation:button-pulse .7s .2s ease-out 1}
 .hotspot.button-visible:hover::before,.hotspot.button-visible:focus-visible::before{animation:button-shine .72s ease-out both}

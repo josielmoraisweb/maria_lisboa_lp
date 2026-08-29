@@ -31,8 +31,8 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .hotspot:focus-visible{outline:4px solid rgba(117,80,68,.55);outline-offset:4px}
 .hotspot:active{transition-duration:.09s}
 .card-effect{position:absolute;z-index:19;left:var(--x);top:var(--y);width:var(--w);height:var(--h);overflow:hidden;border-radius:30px;pointer-events:none;transform-origin:center;isolation:isolate}
-.site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
-.site-desktop .card-effect.card-pop{background:url('./assets/figma_desktop_exact.webp') calc(-1 * var(--x)) calc(-1 * var(--y))/1920px 2949px no-repeat}
+.site-mobile .card-effect.card-pop{background:url('./assets/figma_mobile_exact.webp?v=320c2ad') calc(-1 * var(--x)) calc(-1 * var(--y))/800px 3791px no-repeat}
+.site-desktop .card-effect.card-pop{background:url('./assets/figma_desktop_exact.webp?v=320c2ad') calc(-1 * var(--x)) calc(-1 * var(--y))/1920px 2949px no-repeat}
 .card-effect.card-pop{z-index:21;animation:card-click-pop .42s cubic-bezier(.2,.8,.25,1) both;will-change:transform,filter}
 .hotspot.button-visible::before{animation:button-pulse .7s .2s ease-out 1}
 .hotspot.button-visible:hover::before,.hotspot.button-visible:focus-visible::before{animation:button-shine .72s ease-out both}
@@ -52,15 +52,15 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 <body>
   <div class="stage-shell" id="stage-shell">
     <main class="site site-mobile" aria-label="Maria Lisboa">
-      <section class="slice reveal" style="--y:0px;--h:783px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:783px;--h:295px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-right" style="--y:1078px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:1354px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-right" style="--y:1630px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:1906px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-right" style="--y:2182px;--h:284px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice reveal" style="--y:2466px;--h:1200px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
-      <section class="slice" style="--y:3666px;--h:125px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp" alt="" /></div></section>
+      <section class="slice reveal" style="--y:0px;--h:783px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:783px;--h:295px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1078px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1354px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1630px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1906px;--h:276px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:2182px;--h:284px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal" style="--y:2466px;--h:1200px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice" style="--y:3666px;--h:125px"><div class="slice-content"><img src="./assets/figma_mobile_exact.webp?v=320c2ad" alt="" /></div></section>
 
       <div class="card-effect" style="--x:53px;--y:812px;--w:695px;--h:258px" data-card="mentoria-online"></div>
       <div class="card-effect" style="--x:53px;--y:1092px;--w:695px;--h:257px" data-card="mentoria-ao-vivo"></div>
@@ -78,11 +78,11 @@ body{min-width:320px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
     </main>
 
     <main class="site site-desktop" aria-label="Maria Lisboa">
-      <section class="slice reveal" style="--y:0px;--h:989px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:989px;--h:298px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-right" style="--y:1287px;--h:323px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
-      <section class="slice reveal reveal-left" style="--y:1610px;--h:346px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
-      <section class="slice reveal" style="--y:1956px;--h:878px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp" alt="" /></div></section>
+      <section class="slice reveal" style="--y:0px;--h:989px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:989px;--h:298px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-right" style="--y:1287px;--h:323px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal reveal-left" style="--y:1610px;--h:346px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=320c2ad" alt="" /></div></section>
+      <section class="slice reveal" style="--y:1956px;--h:878px"><div class="slice-content"><img src="./assets/figma_desktop_exact.webp?v=320c2ad" alt="" /></div></section>
       <footer class="desktop-footer">
         <p class="desktop-footer-copyright">© Copyright Maria Lisboa 2026 - Todos os direitos reservados.</p>
         <p class="desktop-footer-developer">Desenvolvido por: @josielmorais_</p>
